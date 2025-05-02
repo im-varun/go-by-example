@@ -60,4 +60,9 @@ func main() {
 		}
 	}
 	fmt.Println("2d:", twoD)
+
+	nums := []int{10, 20, 30, 40, 50}
+	for index, value := range nums {
+		fmt.Println("index:", index, "value:", value)
+	}
 }
