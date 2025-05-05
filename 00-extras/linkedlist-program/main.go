@@ -81,7 +81,6 @@ func (linkedList *LinkedList) Print() {
 		currentNode = currentNode.next
 	}
 	fmt.Println("]")
-
 }
 
 func main() {
