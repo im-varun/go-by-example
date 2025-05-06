@@ -15,7 +15,7 @@ type Stack struct {
 func (stack *Stack) Push(data int) {
 	newNode := &Node{data: data, next: nil}
 
-	if stack.head == nil {
+	if stack.IsEmpty() {
 		stack.head = newNode
 		stack.size++
 		return
