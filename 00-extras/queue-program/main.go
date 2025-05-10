@@ -2,19 +2,19 @@ package main
 
 import "fmt"
 
-type Node struct {
+type node struct {
 	data int
-	next *Node
+	next *node
 }
 
 type Queue struct {
-	head *Node
-	tail *Node
+	head *node
+	tail *node
 	size int
 }
 
 func (queue *Queue) Enqueue(data int) {
-	newNode := &Node{data: data, next: nil}
+	newNode := &node{data: data, next: nil}
 
 	if queue.IsEmpty() {
 		queue.head = newNode

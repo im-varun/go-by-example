@@ -2,18 +2,18 @@ package main
 
 import "fmt"
 
-type Node struct {
+type node struct {
 	data int
-	next *Node
+	next *node
 }
 
 type Stack struct {
-	head *Node
+	head *node
 	size int
 }
 
 func (stack *Stack) Push(data int) {
-	newNode := &Node{data: data, next: nil}
+	newNode := &node{data: data, next: nil}
 
 	if stack.IsEmpty() {
 		stack.head = newNode

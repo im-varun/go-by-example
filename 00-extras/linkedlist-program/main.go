@@ -2,17 +2,17 @@ package main
 
 import "fmt"
 
-type Node struct {
+type node struct {
 	data int
-	next *Node
+	next *node
 }
 
 type LinkedList struct {
-	head *Node
+	head *node
 }
 
 func (linkedList *LinkedList) Insert(data int) {
-	newNode := &Node{data: data, next: nil}
+	newNode := &node{data: data, next: nil}
 
 	if linkedList.head == nil {
 		linkedList.head = newNode
@@ -44,7 +44,7 @@ func (linkedList *LinkedList) Delete(data int) {
 		return
 	}
 
-	var previousNode *Node
+	var previousNode *node
 	currentNode := linkedList.head
 
 	for currentNode != nil && currentNode.data != data {
